@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ar" dir="center">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>طلب عقار</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<main>
+
+    <img src="/C:\Users\ALI.1\Downloads/nabdh-alaser.jpg" width="100px" alt="نبض العصر">  
+  <nav>
+    <ul  class="nav-items active">
+      <li class="nav-items">
+        <a href="#"class="nav-link">الرئيسية</a></li>
+      <li class="nav-items">
+        <a href="#"class="nav-link">المخططات</a></li>
+      <li class="nav-items">
+        <a href="#"class="nav-link">المزدات</a></li>
+      <li class="nav-items">
+        <a href="#"class="nav-link">اتصل بنا</a></li>
+      <li class="nav-items">
+        <a href="#"class="nav-link">عن نبض العصر</a></li>
+    </ul>
+    <button id="cta dark" class="cta dark">أطلب عقار</button> 
+    <button id="cta dark1" class="cta dark1">أضف عقارك</button> 
+    <button id="cta purple" class="cta purple"> تسجيل الدخول</button>
+    <i id="mobile-toggle" class="fa-solid fa-bars"></i>
+  </nav>
+  <div class="hero">
+    <h1><span>ابحث</span> عن عقارك بسهولة</h1>
+  </div>
+  <div class="features">
+    <h6>############</h6>
+    <h3>#########</h3>
+    <div class="features-list">
+      <div class="features1">
+        <div class="content">
+          <h2>القصيم</h2>
+          <p>القصيم المتاح للعقار الذي تبحث عنه هو أن يتم توفيره من قبل المدينة والمملكة العامة بالتعاون مع مؤسسات التنمية والاستثمار والاستشاريات والتدريب والإنتاج والبيئة الحيوية للعقار في حين يتم توفيره عن طريق خدمات التنمية المتاحة في مكان آخر.</p>
+        </div>
+        <img src="C:\Users\ALI.1\Downloads/qwe.jfif" alt="القصيم">
+      </div>
+      <div class="features1">
+        <div class="content">
+          <h2>القصيم</h2>
+          <p>القصيم المتاح للعقار الذي تبحث عنه هو أن يتم توفيره من قبل المدينة والمملكة العامة بالتعاون مع مؤسسات التنمية والاستثمار والاستشاريات والتدريب والإنتاج والبيئة الحيوية للعقار في حين يتم توفيره عن طريق خدمات التنمية المتاحة في مكان آخر.</p>
+        </div>
+        <img src="C:\Users\ALI.1\Downloads/qwe.jfif" alt="القصيم">
+      </div>
+    </div>
+    <div class="details">
+      <h2>التفاصيل</h2>
+      <h6>نفاصيل عنا</h6>
+      <div class="details-list">
+        <div class="details2">
+          <h3>تفصيل1</h3>
+          <p>شرح تفاصيل عنا</p>
+        </div>
+        <div class="details2">
+          <h3>تفصيل1</h3>
+          <p>شرح تفاصيل عنا</p>
+        </div>
+        <div class="details2">
+          <h3>تفصيل1</h3>
+          <p>شرح تفاصيل عنا</p>
+        </div>
+        <div class="details2">
+          <h3>تفصيل1</h3>
+          <p>شرح تفاصيل عنا</p>
+        </div>
+        <div class="details2">
+          <h3>تفصيل1</h3>
+          <p>شرح تفاصيل عنا</p>
+        </div>
+        <div class="details2">
+          <h3>تفصيل1</h3>
+          <p>شرح تفاصيل عنا</p>
+        </div>
+      </div>
+    </div>
+</main>
+<footer>
+    <h3>نبض العصر</h3>
+    <p>تواصل معنا الان</p>
+    <div class="icons">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a> <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a> <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a> <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+</footer>
+
+<script>
+// script.js
+document.getElementById("cta dark").addEventListener("click", function() {
+  window.location.href = "Untitled-1.html"; 
+});
+
+document.getElementById("cta purple").addEventListener("click", function() {
+  window.location.href = "sing in.html"; 
+});
+
+const mobileToggle = document.querySelector("#mobile-toggle");
+const navItems = document.querySelectorAll(".nav-items"); // تم تصحيح navIteks إلى navItems
+
+mobileToggle.addEventListener("click", () => {
+    navItems.forEach(item => item.classList.toggle("active"));
+});
+
+navItems.forEach(function(navItem){
+    navItem.addEventListener("click", () => {
+        navItems.classList.remove("active");
+    });
+});
+
+
+document.getElementById('property-request-form').addEventListener('submit', function(event){
+    event.preventDefault(); // Prevent page reload
+
+    // Basic form validation (example)
+    if (!validateForm()) {
+        return;
+    }
+
+    // ... (Here you can send the data to the server using AJAX or Fetch API)
+
+    alert("تم إرسال طلبك بنجاح!");
+    this.reset(); // Reset the form
+});
+
+function validateForm() {
+    let isValid = true;
+    let city = document.getElementById('city').value;
+    if (city === "") {
+        alert("الرجاء اختيار المدينة");
+        isValid = false;
+    }
+    // ... (Validate other required fields)
+    return isValid;
+}
+
+function populateDistricts(city) {
+    const districtSelect = document.getElementById("district");
+    districtSelect.innerHTML = '<option value="">اختر الحي</option>';
+  
+    if (city === "الرياض") {
+      const districts = ["الشميسي", "الملز", "الروضة", /* ...  أضف باقي أحياء الرياض  */];
+      districts.forEach(district => {
+        const option = document.createElement("option");
+        option.value = district;
+        option.text = district;
+        districtSelect.add(option);
+      });
+    } else if (city === "بريدة") {
+      const districts = ["الافق", "الصفراء", "الاسكان", /* ...  أضف باقي أحياء بريدة  */];
+      districts.forEach(district => {
+        const option = document.createElement("option");
+        option.value = district;
+        option.text = district;
+        districtSelect.add(option);
+      });
+    }
+  }
+  
+  //  ربط  دالة  populateDistricts  بحدث تغيير  المدينة
+  document.getElementById("city").addEventListener("change", function() {
+    populateDistricts(this.value);
+  });
+  
+  //  معالجة  إرسال النموذج
+  document.getElementById("property-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    //  هنا يمكنك  جمع  البيانات  من النموذج  وإرسالها  إلى  الخادم
+  }); 
+
+  document.querySelectorAll('.property-type-options .option');
+
+</script>
+</body>
+</html>
