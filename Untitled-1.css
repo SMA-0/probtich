@@ -1,0 +1,200 @@
+/* الأنماط المتقدمة لتحديد الجوانب الشفافة */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  font-family: "Roboto", sans-serif;  /*  تصحيح font-family  */
+}
+
+header {
+  background-color: #2e2968; /* اللون المخصص */
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+header .logo img {
+  max-inline-size: 120px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  color: #564ccf;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 25px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cta {
+  font-family: inherit;
+  background-color: #005bc4;
+  color: var(--w);
+  padding:0.75rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  display:inline-block;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.cta.dark {
+  background-color: #252731;
+  transition: background-color 0.3s;
+}
+.cta.dark:hover {
+  background-color: #2d2e2e;
+}
+
+
+.cta.dark1 {
+  background-color: #252731;
+  transition: background-color 0.3s;
+}
+.cta.dark1:hover {
+  background-color: #2d2e2e;
+}
+
+.cta.purple {
+  background-color: #564ccf;
+}
+
+.cta.purple:hover {
+  background-color: #665cd3;
+}
+ 
+.cta.purple1 {
+  background-color: #564ccf;
+}
+
+.cta.purple1:hover {
+  background-color: #665cd3;
+}
+.cta:hover {
+  background-color: #0056b3;
+}
+
+.container {
+  padding: 50px 15px;
+}
+
+.form-container {
+  background-color:#ececec;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  inline-size: 50%;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #3b348a;
+}
+
+.form-section {
+  margin-block-end: 30px;
+}
+
+.form-section label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.form-section input,
+.form-section select,
+.form-section textarea {
+  inline-size: 100%;
+  padding: 12px;
+  margin-block-end: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.button-option {
+  background-color: transparent;
+  border: 2px solid #564ccf;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button-option:hover {
+  background-color: #564ccf;
+  color: white;
+}
+
+.button-option.selected {
+  background-color: #564ccf;
+  color: white;
+}
+
+footer {
+  background-color: #2e2968;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-block-start: 50px;
+}
+
+/* بقية التنسيقات هنا ... */
+
+.dynamic-options {
+  display: none; /* إخفاء الخيارات الفرعية بشكل افتراضي */
+}
+
+/* باقي التنسيقات */
+
+ /* إضافة أنماط جديدة */
+ .map-container {
+  block-size: 300px;
+  margin: 20px 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.city-search-wrapper {
+  position: relative;
+  margin: 15px 0;
+}
+
+.city-search-wrapper i {
+  position: absolute;
+  inset-inline-start: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+#city {
+  inline-size: 100%;
+  padding: 12px 40px 12px 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  appearance: none;
+}

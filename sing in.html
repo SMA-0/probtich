@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>وصلت - منصة عقارية</title>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<style>
+
+/* التنسيقات العامة */
+
+* {
+
+box-sizing: border-box;
+
+margin: 0;
+
+padding: 0;
+
+}
+
+body {
+
+font-family: 'Tajawal', sans-serif;
+
+background: #f5f5f5;
+
+}
+
+/* شريط التنقل العلوي */
+
+.navbar {
+
+background: #fff;
+
+padding: 0 120px;
+
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+height: 72px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+}
+
+.logo {
+
+width: 120px;
+
+}
+
+.nav-items {
+
+display: flex;
+
+align-items: center;
+
+gap: 32px;
+
+}
+
+.nav-link {
+
+color: #333;
+
+text-decoration: none;
+
+font-weight: 500;
+
+transition: color 0.3s;
+
+padding: 8px 12px;
+
+border-radius: 4px;
+
+}
+
+.nav-link:hover {
+
+color: #2b6efd;
+
+background: #f0f4ff;
+
+}
+
+.profile-container {
+
+position: relative;
+
+}
+
+.profile-icon {
+
+width: 40px;
+
+height: 40px;
+
+border-radius: 50%;
+
+cursor: pointer;
+
+border: 2px solid #eee;
+
+transition: transform 0.3s;
+
+}
+
+.profile-icon:hover {
+
+transform: scale(1.05);
+
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+}
+
+/* قائمة الملف الشخصي */
+
+.profile-menu {
+
+position: absolute;
+
+top: 50px;
+
+left: 0;
+
+background: #fff;
+
+width: 280px;
+
+border-radius: 12px;
+
+box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+padding: 16px 0;
+
+display: none;
+
+z-index: 1000;
+
+}
+
+.profile-menu.show {
+
+display: block;
+
+}
+
+.menu-header {
+
+padding: 16px;
+
+border-bottom: 1px solid #eee;
+
+}
+
+.menu-email {
+
+color: #666;
+
+font-size: 0.9em;
+
+}
+
+.menu-item {
+
+padding: 12px 24px;
+
+display: flex;
+
+align-items: center;
+
+gap: 16px;
+
+color: #333;
+
+text-decoration: none;
+
+transition: background 0.3s;
+
+}
+
+.menu-item:hover {
+
+background: #f8f9fa;
+
+}
+
+/* صفحة التسجيل */
+
+.login-container {
+
+max-inline-size: 480px;
+margin: 80px auto;
+padding: 40px;
+background: #fff;
+border-radius: 16px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+}
+
+.login-title {
+text-align: center;
+color: #1a1a1a;
+margin-block-end: 32px;
+}
+
+.form-input {
+inline-size: 100%;
+padding: 14px;
+margin-block-end: 20px;
+border: 1px solid #ddd;
+border-radius: 8px;
+font-size: 16px;
+transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+border-color: #2b6efd;
+outline: none;
+}
+
+.submit-btn {
+background: #2b6efd;
+color: #fff;
+padding: 16px;
+inline-size: 100%;
+border: none;
+border-radius: 8px;
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+background: #1a5ad9;
+}
+
+</style>
+</head>
+<body>
+<!-- شريط التنقل العلوي -->
+
+<nav class="navbar">
+<img src="logo.png" alt="الموقع" class="logo">
+<div class="nav-items">
+
+<a href="#" class="nav-link">إدراج عقار</a>
+
+<div class="profile-container">
+<img src="profile.png" class="profile-icon" alt="الملف الشخصي">
+
+<div class="profile-menu">
+
+<div class="menu-header">
+
+<div>سليمان عبدالله</div>
+
+<div class="menu-email">slmn0991@gmail.com</div>
+
+</div>
+
+<a href="#" class="menu-item">
+
+<span>الملف الشخصي</span>
+
+</a>
+
+<a href="#" class="menu-item">
+
+<span>عقاراتي</span>
+
+</a>
+
+<div class="menu-item">
+
+<span>تسجيل الخروج</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- محتوى الصفحة الرئيسية -->
+
+<div class="main-content">
+
+<!-- ... محتوى الصفحة الرئيسية ... -->
+
+</div>
+
+<!-- صفحة التسجيل -->
+
+<div class="login-container hidden">
+
+<h1 class="login-title">تسجيل الدخول</h1>
+
+<form id="loginForm">
+
+<input type="text" class="form-input" placeholder="الاسم الكامل" required>
+
+<input type="email" class="form-input" placeholder="البريد الإلكتروني" required>
+
+<input type="tel" class="form-input" placeholder="رقم الجوال" required>
+
+<button type="submit" class="submit-btn">تسجيل الدخول</button>
+
+</form>
+
+</div>
+
+<script>
+
+// إدارة حالة المستخدم
+
+let isLoggedIn = false;
+
+// عناصر DOM
+
+const profileIcon = document.querySelector('.profile-icon');
+
+const profileMenu = document.querySelector('.profile-menu');
+
+const loginContainer = document.querySelector('.login-container');
+
+// أحداث النقر
+
+profileIcon.addEventListener('click', (e) => {
+
+e.stopPropagation();
+
+profileMenu.classList.toggle('show');
+
+});
+
+document.addEventListener('click', (e) => {
+
+if (!e.target.closest('.profile-container')) {
+
+profileMenu.classList.remove('show');
+
+}
+
+});
+
+// إدارة تسجيل الدخول
+
+document.getElementById('loginForm')?.addEventListener('submit', (e) => {
+
+e.preventDefault();
+
+isLoggedIn = true;
+
+window.location.href = 'index.html';
+
+});
+
+// إظهار/إخفاء صفحة التسجيل
+
+document.querySelector('.nav-link[href="#"]').addEventListener('click', (e) => {
+
+e.preventDefault();
+
+loginContainer.classList.remove('hidden');
+
+});
+
+</script>
+
+</body>
+
+</html>

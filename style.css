@@ -1,0 +1,421 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*  style.css  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --w:#fff;
+  --g:#c4c4c4;
+  --lp:#564ccf;
+  --b:#005bc4;
+  --b:#000000;
+  --dp:#665cd3;
+}
+
+p {
+  word-spacing: 10px; 
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #fff;
+  font-family: "Roboto", sans-serif;  /*  تصحيح font-family  */
+  direction: rtl;
+}
+
+main {
+  max-inline-size: 1350px;  /*  تحديد الحد الأقصى للعرض للمحتوى  */
+  margin: 0 auto;  /*  توسيط main أفقيًا  */
+  color: #564ccf;
+
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;  /*  توزيع العناصر في nav  */
+  align-items: center;
+  block-size: 10vh;
+  inline-size: 100%;
+  color: #564ccf;
+
+}
+
+nav .nav-items {
+  list-style-type: none;
+  display: flex;  /*  جعل nav-items flex container  */
+  justify-content: center;  /*  توسيط العناصر في nav-items  */
+  gap: 2rem;
+  color: #564ccf;
+
+}
+
+nav .nav-items .nav-item {
+  float: inline-end;  /*  تعويم العناصر إلى اليمين  */
+  margin-inline-start: 2rem;  /*  إضافة مسافة على اليسار  */
+  /*  إزالة float و margin  */
+  color: #564ccf;
+
+}
+
+nav .nav-items::after { /* مسح التعويم بعد القائمة */
+    content: "";
+    display: block;
+    clear: both;
+}
+  
+  nav { /* تأكد من عدم وجود float في nav */
+    float: none; 
+  }
+
+  .nav-items .nav-link {
+   text-decoration: none;
+   justify-content: center;
+   color:var(--g);
+  }
+
+  .nav-items .nav-link:hover {
+    color: #faf5f5;
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    color: #564ccf;
+  }
+
+  nav ul li {
+    display: inline;
+    margin: 0 25px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  nav #mobile-toggle {
+    color: #fff;
+    font-size: 2rem;
+    display: none;
+  }
+
+  .cta {
+    font-family: inherit;
+    background-color: #005bc4;
+    color: var(--w);
+    padding:0.75rem 2rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    display:inline-block;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .cta.dark {
+    background-color: #252731;
+    transition: background-color 0.3s;
+  }
+  .cta.dark:hover {
+    background-color: #2d2e2e;
+  }
+  
+  
+  .cta.dark1 {
+    background-color: #252731;
+    transition: background-color 0.3s;
+  }
+  .cta.dark1:hover {
+    background-color: #2d2e2e;
+  }
+  
+  .cta.purple {
+    background-color: #564ccf;
+  }
+
+  .cta.purple:hover {
+    background-color: #665cd3;
+  }
+
+  /* القسم الاساسي */
+
+  .hero {
+    justify-content: center;
+    flex-direction: column;
+    block-size: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    color: #fff;
+    inline-size: 40%;
+    margin-block-end: 2rem;
+    text-align: center
+  }
+
+  .hero h1 span {
+    color:#564ccf;
+  }
+
+  .hero .cta.purple {
+   margin-inline-start: 1rem;
+  }
+
+  /* المميزات */
+  .features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .features h3 {
+    color: #fff;
+    font-size: 2rem;
+    margin-block-end: 1rem;
+  }
+
+  .features h6 {
+    color: #c4c4c4;
+    font-size: 1rem;
+    margin-block-end: 3rem;
+  }
+  
+  .features1{
+    display: flex; 
+   background-color: #252731;
+   gap: 100px; /*  إضافة مسافة بين العناصر  */
+   justify-content: center;
+    border-radius: 3rem;
+    overflow: hidden; /*  تعطيل التفاف التي يظهر عند المسافة بين العناصر  */
+    margin-block-end: 3rem; /*  إضافة مسافة بين العناصر  */
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.feature {
+  block-size: 500px;
+  inline-size: 100px;
+  justify-content: center;
+  display: flex;
+}
+
+.features .content {
+  padding: 4rem;
+  flex: 1;
+}
+
+  .features .content  {
+ color: #4e41b4;
+    font-size: 2rem;
+    margin-block-end: 2rem;
+  }
+  
+  .features .content h2 {
+    color:#fff;
+    margin-block-end: 2rem;
+  }
+
+  .features .content p {
+    color:#c4c4c4;
+    font-size: 1.2rem;
+    inline-size: 80%;
+    line-height: 2;
+  }
+
+  .features img {
+    flex: 1;
+    block-size: auto;
+  }
+
+
+  /* التفاصيل */
+
+
+  .details {
+    margin: 10rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .details h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin-block-end: 1rem;
+  }
+
+  .details h6 {
+    color: #c4c4c4;
+    font-size: 1rem;
+  }
+
+  .details-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-block-end: 4rem;
+  } 
+
+  .details2{
+    background-color: #252731;
+    gap: 100px; /*  إضافة مسافة بين العناصر  */
+    margin-block-end: 3rem; 
+    padding: 3rem;
+   border-radius: 2rem;
+   justify-content: center;
+   color: #fff;
+   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .details i{
+    color: #564ccf;
+    font-size: 1.5rem;
+    margin-block-end: 2rem;
+  }
+
+  .details h3 {
+ font-size: 2rem;
+ color: #fff;
+ margin-block-end: 1rem;
+  }
+
+  .details p {
+    color: #c4c4c4;
+    font-size: 1.2rem;
+    inline-size: 80%;
+    line-height: 2;
+  }
+
+ 
+/* التدبيل */
+footer {
+  background-color: #252731;
+  min-block-size: 25hv;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer h3 {
+  color: #fff;
+  font-size: 2rem;
+  padding-block-end: 1rem;
+  margin-block-end: 2rem;
+  border-block-end: 1px solid #c4c4c4;
+  inline-size: 100%;
+  text-align: center;
+}
+
+footer p {
+  color: #c4c4c4;
+  margin-block-end: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  inline-size: 80%;
+  line-height: 2;
+}
+
+footer i{
+  color: #c4c4c4;
+  margin: 1rem;
+  font-size: 1.5rem;
+}
+
+footer i:hover{
+  color: #564ccf;
+}
+
+/* تنسيق الشاشة على كل الاجهزة */
+
+@media screen and (max-width: 1450px) {
+  main{
+    max-inline-size: 1024px;
+  }
+}
+
+@media screen and (max-width: 1085px) {
+  main{
+    max-inline-size: 760px;
+  }
+
+  .features-list img{
+    display: none;
+}
+.details-list{
+  grid-template-columns: 1fr 1fr; 
+}
+}
+
+@media screen and (max-width: 890px) {
+  main{
+    max-inline-size: 600px;
+  }
+
+.details-list{
+  grid-template-columns: 1fr ; 
+}
+html{
+  font-size: 90%;
+}
+}
+
+@media screen and (max-width: 600px) {
+  main{
+    
+    text-align: center;
+  }
+  .features .content p {
+   inline-size: 100%;
+  }
+  .hero h1{
+     inline-size: 80%;
+  }
+  nav #mobile-toggle {
+    display: block;
+  }
+
+  nav .nav-items {
+   display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #4e41b4;
+    inline-size: 100%;
+    block-size: 50%;
+    top: 20vh;
+    inset-inline-start: 0;
+    justify-content: center;
+    nav .nav-items {
+      list-style-type: none; /*  إزالة النقاط من القائمة  */
+      gap: 2rem; /*  إضافة مسافة 2rem بين كل عنصرين  */
+  }
+  nav .nav-items.active {
+    display: flex;
+  }
+  .cta {
+    font-family: inherit;
+    background-color: #005bc4;
+    color: var(--w);
+    padding:0.50rem 0.75rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    display:inline-block;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+}
+}
